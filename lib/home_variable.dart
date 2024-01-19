@@ -11,7 +11,12 @@ final works = [
   },
   {
     'id': '2',
-    'title': 'plumber',
+    'title': 'Plumber',
     'imageUrl': 'assets/images/plum.png',
+  },
+  {
+    'id': '3',
+    'title': 'Cleaner',
+    'imageUrl': 'assets/images/clean.png',
   },
 ];

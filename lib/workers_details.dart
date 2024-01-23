@@ -1,12 +1,15 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:work_wave_connect/person_details.dart';
 import 'package:work_wave_connect/workers_page_cart.dart';
 import 'package:work_wave_connect/workers_data.dart';
 
 class WorkersDetails extends StatelessWidget {
-  final Map<String, Object> work;
+  final Map<String, Object> worker;
   const WorkersDetails({
     super.key,
-    required this.work,
+    required this.worker,
   });
 
   @override
@@ -24,7 +27,7 @@ class WorkersDetails extends StatelessWidget {
             children: [
               Column(
                 children: [
-                  Text(work['title'] as String,
+                  Text(worker['title'] as String,
                       style: Theme.of(context).textTheme.titleMedium),
                 ],
               ),
@@ -39,14 +42,17 @@ class WorkersDetails extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) {
-                        return WorkersDetails(work: work);
+                        return const PersonDetails();
                       }),
                     );
                   },
-                  child: WorkerCart(
-                    image: work['imageUrl'] as String,
-                    title: work['title'] as String,
-                  ),
+                  child: worker['title'] == work['title']
+                      ? WorkerCart(
+                          profile: work['imageUrl'] as String,
+                          discription: work['discription'] as String,
+                          name: work['name'] as String,
+                        )
+                      : Container(),
                 );
               },
             ),

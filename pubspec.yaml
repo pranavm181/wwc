@@ -63,6 +63,9 @@ flutter:
     - assets/images/elec.png
     - assets/images/carp.png
     - assets/images/plum.png
+    - assets/images/proicon.png
+    
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

@@ -17,7 +17,7 @@ class WorkerCart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsetsDirectional.symmetric(
-          horizontal: 18.0, vertical: 5.0),
+          horizontal: 20.0, vertical: 5.0),
       child: Card(
         elevation: 10,
         shape: RoundedRectangleBorder(
@@ -38,24 +38,28 @@ class WorkerCart extends StatelessWidget {
                     image: profile.isEmpty
                         ? const AssetImage('assets/images/proicon.png')
                         : AssetImage(profile),
-                    height: 85,
+                    height: 90,
                   ),
                   Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        children: [
-                          Text(
-                            discription,
-                            style: Theme.of(context).textTheme.bodySmall,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                          Text(
-                            'place:$place',
-                            style: Theme.of(context).textTheme.bodySmall,
-                          ),
-                        ],
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          children: [
+                            Text(
+                              discription,
+                              style: Theme.of(context).textTheme.bodySmall,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            Text(
+                              textAlign: TextAlign.left,
+                              'place:$place',
+                              style: Theme.of(context).textTheme.bodySmall,
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

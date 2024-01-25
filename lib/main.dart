@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'WWC',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(235, 90, 211, 227),
+          seedColor: const Color.fromARGB(235, 250, 0, 67),
         ),
         fontFamily: 'Oswald',
         appBarTheme: const AppBarTheme(

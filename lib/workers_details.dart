@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:work_wave_connect/person_details.dart';
 import 'package:work_wave_connect/workers_page_cart.dart';
@@ -48,7 +46,7 @@ class WorkersDetails extends StatelessWidget {
                   },
                   child: worker['title'] == work['title']
                       ? WorkerCart(
-                          profile: work['imageUrl'] as String,
+                          profile: work['userImage'] as String,
                           discription: work['discription'] as String,
                           name: work['name'] as String,
                         )

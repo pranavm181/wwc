@@ -50,6 +50,7 @@ class WorkersDetails extends StatelessWidget {
                           discription: work['discription'] as String,
                           name: work['name'] as String,
                           place: (work['place'] as String),
+                          age: (work['age'] as String),
                         )
                       : Container(),
                 );

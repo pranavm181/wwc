@@ -31,6 +31,10 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.bold,
             fontSize: 20,
           ),
+          titleSmall: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 10,
+          ),
         ),
         useMaterial3: true,
       ),

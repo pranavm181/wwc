@@ -4,6 +4,7 @@ final workersdata = [
     'title': 'Carpenter\'s',
     'discription':
         'a worker worker  was in thew go to mu]y hose is hins inn kk was was   nnnsas ennu ninde moytheen kandu njan kannane karmukilvarnandee cundill',
+    'age': '25',
     'name': 'pranav manikandan opf ',
     'place': 'thali',
     'userImage': '',
@@ -13,6 +14,7 @@ final workersdata = [
     'title': 'Electrician\'s',
     'discription':
         'a worker worker  was in thew go to mu]y hose is hins inn kk was was   nnnsas ennu ninde moytheen kandu njan kannane karmukilvarnandee cundill',
+    'age': '25',
     'name': ' Akash u  ',
     'place': 'nellyvaay',
     'userImage': '',
@@ -22,6 +24,7 @@ final workersdata = [
     'title': 'Plumber\'s',
     'discription':
         'a worker worker  was in thew go to mu]y hose is hins inn kk was was   nnnsas ennu ninde moytheen kandu njan kannane karmukilvarnandee cundill',
+    'age': '25',
     'name': 'Anoop k a   ',
     'place': 'parlikaad',
     'userImage': '',
@@ -31,6 +34,7 @@ final workersdata = [
     'title': 'Cleaner\'s',
     'discription':
         'a worker worker  was in thew go to mu]y hose is hins inn kk was was   nnnsas ennu ninde moytheen kandu njan kannane karmukilvarnandee cundill',
+    'age': '25',
     'name': 'Arjun aravindan   ',
     'place': 'nenmara',
     'userImage': '',
@@ -40,6 +44,7 @@ final workersdata = [
     'title': 'Carpenter\'s',
     'discription':
         'a worker worker  was in thew go to mu]y hose is hins inn kk was was   nnnsas ennu ninde moytheen kandu njan kannane karmukilvarnandee cundill',
+    'age': '25',
     'name': 'Anathakrishana   ',
     'place': 'Thrissur',
     'userImage': '',

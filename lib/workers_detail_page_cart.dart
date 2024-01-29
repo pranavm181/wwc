@@ -5,12 +5,14 @@ class WorkerCart extends StatelessWidget {
   final String place;
   final String name;
   final String profile;
+  final String age;
   const WorkerCart({
     super.key,
     required this.discription,
     required this.profile,
     required this.name,
     required this.place,
+    required this.age,
   });
 
   @override
@@ -43,18 +45,23 @@ class WorkerCart extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            name,
-                            style: Theme.of(context).textTheme.bodySmall,
+                            'Name: $name',
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                          Text(
+                            textAlign: TextAlign.center,
+                            'Age: $age',
+                            style: Theme.of(context).textTheme.bodyMedium,
                           ),
                           Text(
                             discription,
-                            style: Theme.of(context).textTheme.bodySmall,
+                            style: Theme.of(context).textTheme.bodyMedium,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                           ),
                           Text(
                             textAlign: TextAlign.center,
-                            'place:$place',
+                            'Place: $place',
                             style: Theme.of(context).textTheme.bodyMedium,
                           ),
                         ],

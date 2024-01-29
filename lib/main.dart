@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromARGB(235, 250, 0, 67),
         ),
         fontFamily: 'Oswald',
+        
         appBarTheme: const AppBarTheme(
           titleTextStyle: TextStyle(
             fontSize: 20,
@@ -35,6 +36,7 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.bold,
             fontSize: 10,
           ),
+          
         ),
         useMaterial3: true,
       ),

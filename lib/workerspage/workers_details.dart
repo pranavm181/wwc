@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:work_wave_connect/person_details.dart';
-import 'package:work_wave_connect/workers_detail_page_cart.dart';
-import 'package:work_wave_connect/workers_data.dart';
+import 'package:work_wave_connect/workerspage/workers_detail_page_cart.dart';
+import 'package:work_wave_connect/workerspage/workers_data.dart';
 
 class WorkersDetails extends StatelessWidget {
   final Map<String, Object> worker;
@@ -40,7 +40,7 @@ class WorkersDetails extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) {
-                        return const PersonDetails();
+                        return PersonDetails(workersdata: work);
                       }),
                     );
                   },

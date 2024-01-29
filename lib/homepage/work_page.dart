@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:work_wave_connect/home_card.dart';
-import 'package:work_wave_connect/home_variable.dart';
-import 'package:work_wave_connect/workers_details.dart';
+import 'package:work_wave_connect/homepage/home_card.dart';
+import 'package:work_wave_connect/homepage/home_variable.dart';
+import 'package:work_wave_connect/workerspage/workers_details.dart';
 
 class WorkPage extends StatefulWidget {
   const WorkPage({super.key});

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:work_wave_connect/about_us.dart';
 import 'package:work_wave_connect/profile_page.dart';
-import 'package:work_wave_connect/work_page.dart';
+import 'package:work_wave_connect/homepage/work_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

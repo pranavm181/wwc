@@ -17,6 +17,10 @@ class WorkerCart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const inter = TextStyle(
+      fontFamily: 'Inter',
+      fontWeight: FontWeight.bold,
+    );
     return Padding(
       padding: const EdgeInsetsDirectional.symmetric(
           horizontal: 20.0, vertical: 5.0),
@@ -46,23 +50,23 @@ class WorkerCart extends StatelessWidget {
                         children: [
                           Text(
                             'Name: $name',
-                            style: Theme.of(context).textTheme.bodyMedium,
+                            style: inter,
                           ),
                           Text(
                             textAlign: TextAlign.center,
                             'Age: $age',
-                            style: Theme.of(context).textTheme.bodyMedium,
+                            style: inter,
                           ),
                           Text(
                             discription,
-                            style: Theme.of(context).textTheme.bodyMedium,
+                            style: inter,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                           ),
                           Text(
                             textAlign: TextAlign.center,
                             'Place: $place',
-                            style: Theme.of(context).textTheme.bodyMedium,
+                            style: inter,
                           ),
                         ],
                       ),

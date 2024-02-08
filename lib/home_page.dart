@@ -32,7 +32,10 @@ class _HomePageState extends State<HomePage> {
         },
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home,
+              size: 25,
+            ),
             label: 'home',
           ),
           // BottomNavigationBarItem(
@@ -40,7 +43,10 @@ class _HomePageState extends State<HomePage> {
           //   label: '',
           // ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_2_sharp),
+            icon: Icon(
+              Icons.person_2_sharp,
+              size: 25,
+            ),
             label: 'profile',
           ),
         ],

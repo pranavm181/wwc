@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:work_wave_connect/home_page.dart';
+//import 'package:work_wave_connect/home_page.dart';
+import 'package:work_wave_connect/welcome_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const Welcome(),
     );
   }
 }

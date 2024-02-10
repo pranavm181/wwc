@@ -38,6 +38,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         const SizedBox(height: 10),
                         TextFormField(
+                          obscureText: true,
                           decoration: const InputDecoration(
                             prefixIcon: Icon(Icons.fingerprint_outlined),
                             labelText: 'Password',

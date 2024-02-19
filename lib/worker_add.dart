@@ -1,22 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:work_wave_connect/signup_controller.dart';
-import 'package:work_wave_connect/validator.dart';
 
-class SignupScreen extends StatefulWidget {
-  const SignupScreen({super.key});
+class AddWorker extends StatefulWidget {
+  const AddWorker({super.key});
 
   @override
-  State<SignupScreen> createState() => _SignupScreenState();
+  State<AddWorker> createState() => _AddWorkerState();
 }
 
-class _SignupScreenState extends State<SignupScreen> {
+class _AddWorkerState extends State<AddWorker> {
   @override
-
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
-    final controller = Get.put(SignuoController());
-    final signupFornKey= GlobalKey<FormState>();
+
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(),
@@ -26,31 +21,29 @@ class _SignupScreenState extends State<SignupScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image(
-                  image: const AssetImage('assets/images/logo.jpg'),
-                  height: size.height * 0.3,
+                Center(
+                  child: Image(
+                    image: const AssetImage('assets/images/logo.jpg'),
+                    height: size.height * 0.3,
+                  ),
                 ),
                 Text(
-                  'Get Started',
+                  'Add your details',
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 const SizedBox(height: 5),
                 Text(
-                  'First create a profile to start your journey',
+                  'Create your worker profle so every one can find you ',
                   style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 const SizedBox(height: 5),
                 Container(
                   padding: const EdgeInsets.symmetric(vertical: 20),
                   child: Form(
-                    key: controller.signupFornKey,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         TextFormField(
-                          controller: controller.nameController,
-                          validator: (value) =>
-                              FValidator.validateEmtyText('First Name', value),
                           decoration: const InputDecoration(
                             label: Text('Full Name'),
                             border: OutlineInputBorder(),
@@ -66,8 +59,6 @@ class _SignupScreenState extends State<SignupScreen> {
                         ),
                         const SizedBox(height: 10),
                         TextFormField(
-                          controller: controller.emailController,
-                          validator: (value) => FValidator.validateEmail(value),
                           decoration: const InputDecoration(
                             label: Text('Email'),
                             border: OutlineInputBorder(),
@@ -83,9 +74,6 @@ class _SignupScreenState extends State<SignupScreen> {
                         ),
                         const SizedBox(height: 10),
                         TextFormField(
-                          controller: controller.phoneController,
-                          validator: (value) =>
-                              FValidator.validatePhoneNo(value),
                           decoration: const InputDecoration(
                             label: Text('Phone No.'),
                             border: OutlineInputBorder(),
@@ -101,11 +89,8 @@ class _SignupScreenState extends State<SignupScreen> {
                         ),
                         const SizedBox(height: 10),
                         TextFormField(
-                          controller: controller.passController,
-                          validator: (value) =>
-                              FValidator.validatePassword(value),
                           decoration: const InputDecoration(
-                            label: Text('Password'),
+                            label: Text(''),
                             border: OutlineInputBorder(),
                             prefixIcon: Icon(Icons.key_outlined),
                             labelStyle: TextStyle(
@@ -121,13 +106,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         SizedBox(
                           width: double.infinity,
                           child: ElevatedButton(
-                            onPressed: () {
-                              if (signupFornKey.currentState!.validate()) {
-                                SignuoController.instance.registerUser(
-                                    controller.emailController.text.trim(),
-                                    controller.passController.text.trim());
-                              }
-                            },
+                            onPressed: () {},
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30.0),
@@ -192,4 +171,3 @@ class _SignupScreenState extends State<SignupScreen> {
     );
   }
 }
-

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1069207519561-2h0sbst1pvfrioggb8ubq0nkvk798meg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1069207519561-2h0sbst1pvfrioggb8ubq0nkvk798meg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCfecSu-PH3Nd74kBH6b8z5VHh0ACCCWKw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1069207519561</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.workWaveConnect.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>work-wave-connect</string>
+	<key>STORAGE_BUCKET</key>
+	<string>work-wave-connect.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1069207519561:ios:e790804ef7b50ffc0a1a98</string>
+</dict>
+</plist>

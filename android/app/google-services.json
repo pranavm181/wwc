@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "1069207519561",
-    "project_id": "work-wave-connect",
-    "storage_bucket": "work-wave-connect.appspot.com"
+    "project_number": "650591894138",
+    "project_id": "fir-78f74",
+    "storage_bucket": "fir-78f74.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1069207519561:android:d44f9a290c76f9340a1a98",
+        "mobilesdk_app_id": "1:650591894138:android:0f37c5fb0ca7c9fe71d9c3",
         "android_client_info": {
           "package_name": "com.example.work_wave_connect"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBLo5x6QfiQP3OOjqMnOtkLsyUWJA-6WAE"
+          "current_key": "AIzaSyDYJTVG_2E-iqy5irRA9a521tttKdrAanQ"
         }
       ],
       "services": {

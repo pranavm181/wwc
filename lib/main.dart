@@ -1,8 +1,17 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-//import 'package:work_wave_connect/home_page.dart';
+import 'package:get/get.dart';
+import 'package:work_wave_connect/authentication.dart';
+import 'package:work_wave_connect/firebase_options.dart';
 import 'package:work_wave_connect/welcome_screen.dart';
+//import 'package:work_wave_connect/home_page.dart';
+//import 'package:work_wave_connect/welcome_screen.dart';
+///import 'package:work_wave_connect/worker_add.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform)
+      .then((value) => Get.put(Authentication()));
   runApp(const MyApp());
 }
 

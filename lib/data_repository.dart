@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+
 import 'package:get/get.dart';
-import 'package:work_wave_connect/authentication.dart';
 import 'package:work_wave_connect/data_model.dart';
 import 'package:work_wave_connect/worker_model.dart';
 
@@ -24,14 +23,12 @@ class DataRepository {
   }
 
   createWorker(WorkerModel work) async {
-    final user = FirebaseAuthMethods(FirebaseAuth.instance).user;
-    await _db
-        .collection('Users')
-        .doc(user.uid)
-        .collection('work')
-        .add(work.toJson())
-        .whenComplete(
+    await _db.collection('Work').add(work.toJson()).whenComplete(
           () => Get.snackbar("Success", "Your data has been added"),
         );
+  }
+
+  Future<Stream<QuerySnapshot>> getJobDetails() async {
+    return await FirebaseFirestore.instance.collection('Work').snapshots();
   }
 }

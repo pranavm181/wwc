@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:work_wave_connect/authentication.dart';
 
 import 'package:work_wave_connect/signup_controller.dart';
 import 'package:work_wave_connect/worker_model.dart';
@@ -13,20 +15,22 @@ class WorkerSignup extends StatefulWidget {
 }
 
 class _WorkerSignupState extends State<WorkerSignup> {
+  String? selectedvalue;
+  final workersList = [
+    '--Select--',
+    'Electrician\'s',
+    'Carpenter\'s',
+    'Plumber\'s',
+    'Cleaner\'s'
+  ];
+
   @override
   Widget build(BuildContext context) {
-    final controller = SignUpController();
-
     Gender? gender;
     final size = MediaQuery.of(context).size;
-    final workersList = [
-      "--Select--",
-      "Electrician",
-      "Carpenter",
-      "Plumber",
-      "Cleaner"
-    ];
-    String? selectedvalue = workersList[0];
+
+    final controller = SignUpController();
+    final user = FirebaseAuthMethods(FirebaseAuth.instance).user;
 
     return SafeArea(
       child: Scaffold(
@@ -51,37 +55,35 @@ class _WorkerSignupState extends State<WorkerSignup> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      DropdownButtonFormField(
-                        value: selectedvalue,
-                        items: workersList.map((e) {
-                          return DropdownMenuItem(
-                            value: e,
-                            child: Text(e),
-                          );
-                        }).toList(),
-                        style: Theme.of(context).textTheme.bodyMedium,
-                        onChanged: (val) {
-                          setState(() {
-                            selectedvalue = val as String;
-                          });
-                        },
-                        icon: const Icon(
-                          Icons.expand_circle_down,
-                          color: Colors.grey,
+                      DecoratedBox(
+                        decoration: BoxDecoration(
+                          border: Border.all(color: Colors.black, width: 1.0),
+                          borderRadius: BorderRadius.circular(50.0),
                         ),
-                        decoration: const InputDecoration(
+                        child: DropdownButtonFormField<String>(
+                          value: selectedvalue,
+                          items: workersList.map((e) {
+                            return DropdownMenuItem(
+                              value: e,
+                              child: Text(e),
+                            );
+                          }).toList(),
+                          onChanged: (val) {
+                            setState(() {
+                              selectedvalue = val;
+                            });
+                          },
+                          icon: const Icon(
+                            Icons.expand_circle_down,
+                            color: Colors.grey,
+                          ),
+                          decoration: const InputDecoration(
                             labelText: "Worker Type",
-                            labelStyle: TextStyle(
-                              color: Colors.black,
-                            ),
+                            labelStyle: TextStyle(color: Colors.black),
                             prefixIcon: Icon(Icons.person),
-                            border: UnderlineInputBorder(
-                              borderSide:
-                                  BorderSide(width: 1.0, color: Colors.black),
-                            ),
-                            focusedBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(
-                                    width: 2.0, color: Colors.black))),
+                            enabledBorder: InputBorder.none,
+                          ),
+                        ),
                       ),
                       const SizedBox(height: 5),
                       TextFormField(
@@ -101,6 +103,7 @@ class _WorkerSignupState extends State<WorkerSignup> {
                       ),
                       const SizedBox(height: 5),
                       TextFormField(
+                        controller: controller.phone,
                         decoration: const InputDecoration(
                           label: Text('Phone No.'),
                           border: OutlineInputBorder(),
@@ -114,23 +117,10 @@ class _WorkerSignupState extends State<WorkerSignup> {
                           ),
                         ),
                       ),
+
                       const SizedBox(height: 5),
                       TextFormField(
-                        decoration: const InputDecoration(
-                          label: Text('Email'),
-                          border: OutlineInputBorder(),
-                          prefixIcon: Icon(Icons.email),
-                          labelStyle: TextStyle(
-                            color: Colors.black,
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide:
-                                BorderSide(width: 2.0, color: Colors.black),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 5),
-                      TextFormField(
+                        controller: controller.age,
                         decoration: const InputDecoration(
                           label: Text('Age'),
                           border: OutlineInputBorder(),
@@ -146,6 +136,7 @@ class _WorkerSignupState extends State<WorkerSignup> {
                       ),
                       const SizedBox(height: 5),
                       TextFormField(
+                        controller: controller.place,
                         decoration: const InputDecoration(
                           label: Text('Place'),
                           border: OutlineInputBorder(),
@@ -176,25 +167,26 @@ class _WorkerSignupState extends State<WorkerSignup> {
                                   });
                                 }),
                           ),
-                          Expanded(
-                            child: RadioListTile<Gender>(
-                                contentPadding: const EdgeInsets.all(0.0),
-                                value: Gender.female,
-                                groupValue: gender,
-                                title: Text(Gender.female.name),
-                                onChanged: (val) {
-                                  setState(() {
-                                    gender = val;
-                                    // ignore: avoid_print
-                                    print(val);
-                                  });
-                                }),
-                          ),
+                          // Expanded(
+                          //   child: RadioListTile<Gender>(
+                          //       contentPadding: const EdgeInsets.all(0.0),
+                          //       value: Gender.female,
+                          //       groupValue: gender,
+                          //       title: Text(Gender.female.name),
+                          //       onChanged: (val) {
+                          //         setState(() {
+                          //           gender = val;
+                          //           // ignore: avoid_print
+                          //           print(val);
+                          //         });
+                          //       }),
+                          // ),
                         ],
                       ),
 
                       const SizedBox(height: 5),
                       TextFormField(
+                        controller: controller.discription,
                         maxLines: 3,
                         decoration: const InputDecoration(
                           label: Text('Description'),
@@ -249,11 +241,12 @@ class _WorkerSignupState extends State<WorkerSignup> {
                             onPressed: () {
                               final work = WorkerModel(
                                 name: controller.name.text,
-                                email: controller.email.text,
+                                email: user.email.toString(),
                                 phone: controller.phone.text,
+                                img: "",
                                 work: selectedvalue,
                                 age: controller.age.text,
-                                gender: gender,
+                                // gender: gender,
                                 discription: controller.discription.text,
                                 place: controller.place.text,
                                 context: context,

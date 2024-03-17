@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:work_wave_connect/about_us.dart';
 import 'package:work_wave_connect/authentication.dart';
+import 'package:work_wave_connect/work_add_page.dart';
 import 'package:work_wave_connect/worker_signup.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -175,7 +176,7 @@ class ProfilePage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return const WorkerSignup();
+                        return const WorkAdd();
                       }));
                     },
                     icon: const Icon(

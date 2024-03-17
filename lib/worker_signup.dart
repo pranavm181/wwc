@@ -1,8 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:work_wave_connect/authentication.dart';
+import 'package:work_wave_connect/person_details.dart';
 
 import 'package:work_wave_connect/signup_controller.dart';
+import 'package:work_wave_connect/work_add_page.dart';
 import 'package:work_wave_connect/worker_model.dart';
 
 enum Gender { male, female, other }
@@ -252,6 +255,7 @@ class _WorkerSignupState extends State<WorkerSignup> {
                                 context: context,
                               );
                               SignUpController().addWork(work);
+                              Navigator.pop(context);
                             },
                             style: ElevatedButton.styleFrom(
                               shape: RoundedRectangleBorder(

@@ -79,7 +79,11 @@ class _WorkAddState extends State<WorkAdd> {
         child: const Icon(Icons.add),
       ),
       appBar: AppBar(
-        title: const Text('Your jobs'),
+        centerTitle: true,
+        title: Text(
+          'Your jobs',
+          style: Theme.of(context).textTheme.titleLarge,
+        ),
       ),
       body: addMyWork(),
     );

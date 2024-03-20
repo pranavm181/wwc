@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:work_wave_connect/authentication.dart';
+import 'package:work_wave_connect/booking_module.dart';
 import 'package:work_wave_connect/data_model.dart';
 import 'package:work_wave_connect/data_repository.dart';
 import 'package:work_wave_connect/worker_model.dart';
@@ -14,7 +15,7 @@ class SignUpController {
   final age = TextEditingController();
   final place = TextEditingController();
   final discription = TextEditingController();
-   final yearOfExp = TextEditingController();
+  final yearOfExp = TextEditingController();
 
   void registerUser(UserModel user) async {
     user.context.read<FirebaseAuthMethods>().signUpWithEmail(user,
@@ -33,5 +34,9 @@ class SignUpController {
 
   void addWork(WorkerModel work) async {
     DataRepository().createWorker(work);
+  }
+
+  void addBooking(BookingModel booking) async {
+    DataRepository().doBooking(booking);
   }
 }

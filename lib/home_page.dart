@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'package:work_wave_connect/my_worker.dart';
 //import 'package:work_wave_connect/about_us.dart';
 import 'package:work_wave_connect/profile_page.dart';
 import 'package:work_wave_connect/homepage/work_page.dart';
@@ -11,8 +13,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int currentPage = 0;
-  List<Widget> pages = const [WorkPage(), ProfilePage()];
+  int currentPage = 1;
+  List<Widget> pages = const [WorkerBooking(), WorkPage(), ProfilePage()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,17 +34,19 @@ class _HomePageState extends State<HomePage> {
         },
         items: const [
           BottomNavigationBarItem(
-            backgroundColor: Colors.lightBlueAccent,
+            icon: Icon(
+              Icons.group_add,
+              size: 25,
+            ),
+            label: 'cart',
+          ),
+          BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
               size: 25,
             ),
             label: 'home',
           ),
-          // BottomNavigationBarItem(
-          //   icon: Icon(Icons.contact_page),
-          //   label: '',
-          // ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.account_circle,

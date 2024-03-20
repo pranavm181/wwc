@@ -29,6 +29,7 @@ class WorkerModel {
   });
   toJson() {
     return {
+      "id": id,
       "name": name,
       "email": email,
       "phno": phone,

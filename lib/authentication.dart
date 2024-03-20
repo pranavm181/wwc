@@ -58,10 +58,11 @@ class FirebaseAuthMethods {
       if (!_auth.currentUser!.emailVerified) {
         // ignore: use_build_context_synchronously
         await sendEmailVerification(context);
-        Navigator.of(context).pushAndRemoveUntil(
-          MaterialPageRoute(builder: (context) => Navigation()),
-          (Route<dynamic> route) => false,
-        );
+        Navigator.of(context).pop();
+        // Navigator.of(context).pushAndRemoveUntil(
+        //   MaterialPageRoute(builder: (context) => Navigation()),
+        //   (Route<dynamic> route) => false,
+        // );
       }
     } on FirebaseAuthException catch (e) {
       // ignore: use_build_context_synchronously

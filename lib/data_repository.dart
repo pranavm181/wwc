@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
+import 'package:work_wave_connect/booking_module.dart';
 import 'package:work_wave_connect/data_model.dart';
 import 'package:work_wave_connect/worker_model.dart';
 
@@ -27,7 +28,17 @@ class DataRepository {
         );
   }
 
+  doBooking(BookingModel booking) async {
+    await _db.collection('Booking').add(booking.toJson()).whenComplete(
+          () => Get.snackbar("Success", "Your data has been added"),
+        );
+  }
+
   Future<Stream<QuerySnapshot>> getJobDetails() async {
     return await FirebaseFirestore.instance.collection('Work').snapshots();
+  }
+
+  Future<Stream<QuerySnapshot>> getBookingDetails() async {
+    return await FirebaseFirestore.instance.collection('Booking').snapshots();
   }
 }

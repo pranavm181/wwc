@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:uuid/uuid.dart';
 
 import 'package:work_wave_connect/authentication.dart';
 
@@ -44,7 +45,7 @@ class _WorkerSignupState extends State<WorkerSignup> {
     final size = MediaQuery.of(context).size;
 
     final user = FirebaseAuthMethods(FirebaseAuth.instance).user;
-
+    String? uid;
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(),
@@ -242,7 +243,12 @@ class _WorkerSignupState extends State<WorkerSignup> {
                           width: double.infinity,
                           child: ElevatedButton(
                             onPressed: () {
+                              setState(() {
+                                const uuid = Uuid();
+                                uid = uuid.v4();
+                              });
                               final work = WorkerModel(
+                                id: uid.toString(),
                                 name: controller.name.text,
                                 email: user.email.toString(),
                                 phone: controller.phone.text,

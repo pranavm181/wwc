@@ -25,7 +25,7 @@ class WorkerCart extends StatelessWidget {
       padding: const EdgeInsetsDirectional.symmetric(
           horizontal: 20.0, vertical: 5.0),
       child: Card(
-        color: Colors.lightBlueAccent,
+        color: const Color.fromARGB(255, 138, 232, 255),
         elevation: 10,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),

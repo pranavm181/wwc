@@ -14,6 +14,7 @@ class SignUpController {
   final age = TextEditingController();
   final place = TextEditingController();
   final discription = TextEditingController();
+   final yearOfExp = TextEditingController();
 
   void registerUser(UserModel user) async {
     user.context.read<FirebaseAuthMethods>().signUpWithEmail(user,

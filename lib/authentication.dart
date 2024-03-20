@@ -25,8 +25,8 @@ class FirebaseAuthMethods {
         email: email,
         password: password,
       );
-      final usr =FirebaseAuthMethods(FirebaseAuth.instance).user;
-      DataRepository().createUser(usr,user);
+      final usr = FirebaseAuthMethods(FirebaseAuth.instance).user;
+      DataRepository().createUser(usr, user);
       // ignore: use_build_context_synchronously
       await sendEmailVerification(context);
       // ignore: use_build_context_synchronously
@@ -58,14 +58,9 @@ class FirebaseAuthMethods {
       if (!_auth.currentUser!.emailVerified) {
         // ignore: use_build_context_synchronously
         await sendEmailVerification(context);
-        // ignore: use_build_context_synchronously
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) {
-              return const Navigation();
-            },
-          ),
+        Navigator.of(context).pushAndRemoveUntil(
+          MaterialPageRoute(builder: (context) => Navigation()),
+          (Route<dynamic> route) => false,
         );
       }
     } on FirebaseAuthException catch (e) {

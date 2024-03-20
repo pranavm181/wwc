@@ -7,20 +7,22 @@ class WorkerModel {
   final String phone;
   final String? work;
   final String age;
-  //final Gender? gender;
+  final String? gender;
   final String discription;
   final String place;
+  final String yearOfExp;
   final String img;
   final BuildContext context;
   const WorkerModel({
     this.id,
     required this.name,
+    required this.yearOfExp,
     required this.email,
     required this.phone,
     required this.img,
     required this.work,
     required this.age,
-    //required this.gender,
+    required this.gender,
     required this.discription,
     required this.place,
     required this.context,
@@ -35,7 +37,8 @@ class WorkerModel {
       "discription": discription,
       "age": age,
       "workerImage": img,
-      // "Gender": gender,
+      "Gender": gender,
+      "yearofexp": yearOfExp,
     };
   }
 }

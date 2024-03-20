@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class WorkerCart extends StatelessWidget {
-  final String discription;
+  final String yearOfExp;
   final String place;
   final String name;
   final String profile;
   final String age;
   const WorkerCart({
     super.key,
-    required this.discription,
+    required this.yearOfExp,
     required this.profile,
     required this.name,
     required this.place,
@@ -63,12 +63,12 @@ class WorkerCart extends StatelessWidget {
                             'Age: $age',
                             style: inter,
                           ),
-                          // Text(
-                          //   discription,
-                          //   style: inter,
-                          //   maxLines: 2,
-                          //   overflow: TextOverflow.ellipsis,
-                          // ),
+                          Text(
+                            yearOfExp,
+                            style: inter,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
                           Text(
                             textAlign: TextAlign.center,
                             'Place: $place',

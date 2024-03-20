@@ -45,14 +45,15 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'WWC',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(
-            seedColor: const Color.fromARGB(235, 171, 164, 166),
-          ),
+          primarySwatch: Colors.blue,
+          // colorScheme: ColorScheme.fromSeed(
+          //   seedColor: const Color.fromARGB(235, 171, 164, 166),
+          // ),
           fontFamily: 'Oswald',
           appBarTheme: const AppBarTheme(
             titleTextStyle: TextStyle(
               fontSize: 20,
-              color: Color.fromARGB(255, 16, 75, 130),
+              color: Colors.blue,
             ),
           ),
           textTheme: const TextTheme(

@@ -52,7 +52,7 @@ class _WorkAddState extends State<WorkAdd> {
                       child: user.email == work['email']
                           ? WorkerCart(
                               profile: work['workerImage'] as String,
-                              discription: work['discription'] as String,
+                              yearOfExp: work['discription'] as String,
                               name: work['name'] as String,
                               place: (work['place'] as String),
                               age: (work['age'] as String),

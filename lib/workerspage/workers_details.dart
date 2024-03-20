@@ -50,7 +50,7 @@ class _WorkersDetailsState extends State<WorkersDetails> {
                       child: widget.worker['title'] == work['work']
                           ? WorkerCart(
                               profile: work['workerImage'] as String,
-                              discription: work['discription'] as String,
+                              yearOfExp: work['discription'] as String,
                               name: work['name'] as String,
                               place: (work['place'] as String),
                               age: (work['age'] as String),

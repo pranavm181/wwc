@@ -1,7 +1,5 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-
 import 'package:work_wave_connect/homepage/home_card.dart';
 import 'package:work_wave_connect/homepage/home_variable.dart';
 import 'package:work_wave_connect/workerspage/workers_details.dart';

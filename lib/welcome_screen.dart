@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:work_wave_connect/login_page.dart';
-//import 'package:work_wave_connect/login_page.dart';
 import 'package:work_wave_connect/signup_page.dart';
 
 class Welcome extends StatelessWidget {

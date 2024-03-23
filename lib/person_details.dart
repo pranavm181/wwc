@@ -1,9 +1,6 @@
-// ignore_for_file: deprecated_member_use
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:url_launcher/url_launcher.dart';
 import 'package:work_wave_connect/booking_module.dart';
 import 'package:work_wave_connect/my_worker.dart';

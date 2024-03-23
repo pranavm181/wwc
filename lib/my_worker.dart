@@ -1,16 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:work_wave_connect/data_repository.dart';
-import 'package:work_wave_connect/homepage/home_variable.dart';
 import 'package:work_wave_connect/person_details.dart';
-import 'package:work_wave_connect/profile_page.dart';
 import 'package:work_wave_connect/workerspage/workers_detail_page_cart.dart';
 
 class WorkerBooking extends StatefulWidget {
-  //final DocumentSnapshot? id;
   const WorkerBooking({
     super.key,
-    //required this.id,
   });
 
   @override

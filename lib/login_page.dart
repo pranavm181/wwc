@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import 'package:work_wave_connect/signup_controller.dart';
 import 'package:work_wave_connect/signup_page.dart';
 

@@ -18,14 +18,6 @@ class ProfilePage extends StatelessWidget {
       borderRadius: BorderRadius.circular(100),
       color: const Color.fromARGB(124, 151, 191, 224).withOpacity(0.2),
     );
-
-    // final usrName = FirebaseFirestore.instance
-    //     .collection('Users')
-    //     .doc(user.uid)
-    //     .collection('user');
-    // final querySnapshot=await
-    // final  doc = usrName.docs.first;
-
     return Scaffold(
       appBar: AppBar(
         title: Center(
@@ -115,10 +107,6 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ),
               ),
-              // const Text(
-              //   "Settings",
-              //   style: styleOfButton,
-              // ),
               trailing: Container(
                 width: 40,
                 height: 40,

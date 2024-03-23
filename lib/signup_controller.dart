@@ -7,7 +7,6 @@ import 'package:work_wave_connect/data_repository.dart';
 import 'package:work_wave_connect/worker_model.dart';
 
 class SignUpController {
-  //Stream<User?> get authState => SignUpController.instance.idTokenChanges();
   final name = TextEditingController();
   final email = TextEditingController();
   final phone = TextEditingController();

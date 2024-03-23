@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'package:work_wave_connect/my_worker.dart';
-//import 'package:work_wave_connect/about_us.dart';
 import 'package:work_wave_connect/profile_page.dart';
 import 'package:work_wave_connect/homepage/work_page.dart';
 

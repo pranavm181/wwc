@@ -29,23 +29,15 @@ class MyApp extends StatelessWidget {
         Provider<SignUpController>(
           create: (_) => SignUpController(),
         ),
-        // Provider<DataModel>(
-        //   create: (_) => DataModel(),
-        // ),
         StreamProvider(
           create: (context) => context.read<FirebaseAuthMethods>().authState,
           initialData: null,
         ),
-        // StreamProvider(
-        //   create: (context) => context.read<SignUpController>().authState,
-        //   initialData: null,
-        // ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'WWC',
         theme: ThemeData(
-          // primarySwatch: Colors.blue,
           colorScheme: ColorScheme.fromSeed(
             seedColor: Color.fromARGB(255, 166, 227, 242),
           ),

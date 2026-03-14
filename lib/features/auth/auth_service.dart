@@ -1,11 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:work_wave_connect/data_model.dart';
-import 'package:work_wave_connect/data_repository.dart';
-import 'package:work_wave_connect/home_page.dart';
-import 'package:work_wave_connect/show_snack_bar.dart';
-import 'package:work_wave_connect/welcome_screen.dart';
+import 'package:work_wave_connect/core/utils.dart';
+import 'package:work_wave_connect/data/models/user_model.dart';
+import 'package:work_wave_connect/data/repositories/data_repository.dart';
+import 'package:work_wave_connect/features/auth/welcome_screen.dart';
+import 'package:work_wave_connect/features/home/home_page.dart';
 
 class FirebaseAuthMethods {
   final FirebaseAuth _auth;
@@ -27,21 +27,18 @@ class FirebaseAuthMethods {
       );
       final usr = FirebaseAuthMethods(FirebaseAuth.instance).user;
       DataRepository().createUser(usr, user);
+      
       // ignore: use_build_context_synchronously
       await sendEmailVerification(context);
-      // ignore: use_build_context_synchronously
 
-      Navigator.push(
+      // ignore: use_build_context_synchronously
+      Navigator.pushAndRemoveUntil(
         context,
-        MaterialPageRoute(
-          builder: (context) {
-            return const Navigation();
-          },
-        ),
+        MaterialPageRoute(builder: (context) => const AuthWrapper()),
+        (route) => false,
       );
     } on FirebaseAuthException catch (e) {
-      // ignore: use_build_context_synchronously
-      showSnackBar(context, e.message!);
+      AppUtils.showSnackBar(e.message ?? "Sign up failed", isError: true);
     }
   }
 
@@ -58,32 +55,28 @@ class FirebaseAuthMethods {
       if (!_auth.currentUser!.emailVerified) {
         // ignore: use_build_context_synchronously
         await sendEmailVerification(context);
+        // ignore: use_build_context_synchronously
         Navigator.of(context).pop();
-        // Navigator.of(context).pushAndRemoveUntil(
-        //   MaterialPageRoute(builder: (context) => Navigation()),
-        //   (Route<dynamic> route) => false,
-        // );
       }
     } on FirebaseAuthException catch (e) {
-      // ignore: use_build_context_synchronously
-      showSnackBar(context, e.message!);
+      AppUtils.showSnackBar(e.message ?? "Login failed", isError: true);
     }
   }
 
   Future<void> sendEmailVerification(BuildContext context) async {
     try {
-      _auth.currentUser!.sendEmailVerification();
-      showSnackBar(context, 'Email verification send!');
+      await _auth.currentUser?.sendEmailVerification();
+      AppUtils.showSnackBar('Email verification sent!');
     } on FirebaseAuthException catch (e) {
-      showSnackBar(context, e.message!);
+      AppUtils.showSnackBar(e.message ?? "Failed to send verification email", isError: true);
     }
   }
 
   Future<void> logout() async => _auth.signOut();
 }
 
-class Navigation extends StatelessWidget {
-  const Navigation({super.key});
+class AuthWrapper extends StatelessWidget {
+  const AuthWrapper({super.key});
 
   @override
   Widget build(BuildContext context) {

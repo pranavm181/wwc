@@ -1,0 +1,500 @@
+Executer.execute(SessionFai
+lureReportingActionExecuter
+.java:39)
+[        ] 	at org.gradle.t
+ooling.internal.provider.Se
+tupLoggingActionExecuter.ex
+ecute(SetupLoggingActionExe
+cuter.java:47)
+[        ] 	at org.gradle.t
+ooling.internal.provider.Se
+tupLoggingActionExecuter.ex
+ecute(SetupLoggingActionExe
+cuter.java:31)
+[        ] 	at org.gradle.l
+auncher.daemon.server.exec.
+ExecuteBuild.doBuild(Execut
+eBuild.java:65)
+[        ] 	at org.gradle.l
+auncher.daemon.server.exec.
+BuildCommandOnly.execute(Bu
+ildCommandOnly.java:37)
+[        ] 	at org.gradle.l
+auncher.daemon.server.api.D
+aemonCommandExecution.proce
+ed(DaemonCommandExecution.j
+ava:104)
+[        ] 	at org.gradle.l
+auncher.daemon.server.exec.
+WatchForDisconnection.execu
+te(WatchForDisconnection.ja
+va:39)
+[        ] 	at org.gradle.l
+auncher.daemon.server.api.D
+aemonCommandExecution.proce
+ed(DaemonCommandExecution.j
+ava:104)
+[        ] 	at org.gradle.l
+auncher.daemon.server.exec.
+ResetDeprecationLogger.exec
+ute(ResetDeprecationLogger.
+java:29)
+[        ] 	at org.gradle.l
+auncher.daemon.server.api.D
+aemonCommandExecution.proce
+ed(DaemonCommandExecution.j
+ava:104)
+[        ] 	at org.gradle.l
+auncher.daemon.server.exec.
+RequestStopIfSingleUsedDaem
+on.execute(RequestStopIfSin
+gleUsedDaemon.java:35)
+[        ] 	at org.gradle.l
+auncher.daemon.server.api.D
+aemonCommandExecution.proce
+ed(DaemonCommandExecution.j
+ava:104)
+[        ] 	at org.gradle.l
+auncher.daemon.server.exec.
+ForwardClientInput$2.create
+(ForwardClientInput.java:78
+)
+[        ] 	at org.gradle.l
+auncher.daemon.server.exec.
+ForwardClientInput$2.create
+(ForwardClientInput.java:75
+)
+[        ] 	at org.gradle.u
+til.internal.Swapper.swap(S
+wapper.java:38)
+[        ] 	at org.gradle.l
+auncher.daemon.server.exec.
+ForwardClientInput.execute(
+ForwardClientInput.java:75)
+[        ] 	at org.gradle.l
+auncher.daemon.server.api.D
+aemonCommandExecution.proce
+ed(DaemonCommandExecution.j
+ava:104)
+[        ] 	at org.gradle.l
+auncher.daemon.server.exec.
+LogAndCheckHealth.execute(L
+ogAndCheckHealth.java:64)
+[        ] 	at org.gradle.l
+auncher.daemon.server.api.D
+aemonCommandExecution.proce
+ed(DaemonCommandExecution.j
+ava:104)
+[        ] 	at org.gradle.l
+auncher.daemon.server.exec.
+LogToClient.doBuild(LogToCl
+ient.java:63)
+[        ] 	at org.gradle.l
+auncher.daemon.server.exec.
+BuildCommandOnly.execute(Bu
+ildCommandOnly.java:37)
+[        ] 	at org.gradle.l
+auncher.daemon.server.api.D
+aemonCommandExecution.proce
+ed(DaemonCommandExecution.j
+ava:104)
+[        ] 	at org.gradle.l
+auncher.daemon.server.exec.
+EstablishBuildEnvironment.d
+oBuild(EstablishBuildEnviro
+nment.java:84)
+[        ] 	at org.gradle.l
+auncher.daemon.server.exec.
+BuildCommandOnly.execute(Bu
+ildCommandOnly.java:37)
+[        ] 	at org.gradle.l
+auncher.daemon.server.api.D
+aemonCommandExecution.proce
+ed(DaemonCommandExecution.j
+ava:104)
+[        ] 	at org.gradle.l
+auncher.daemon.server.exec.
+StartBuildOrRespondWithBusy
+$1.run(StartBuildOrRespondW
+ithBusy.java:52)
+[        ] 	at org.gradle.l
+auncher.daemon.server.Daemo
+nStateCoordinator$1.run(Dae
+monStateCoordinator.java:29
+7)
+[        ] 	at org.gradle.i
+nternal.concurrent.Executor
+Policy$CatchAndRecordFailur
+es.onExecute(ExecutorPolicy
+.java:64)
+[        ] 	at org.gradle.i
+nternal.concurrent.Abstract
+ManagedExecutor$1.run(Abstr
+actManagedExecutor.java:47)
+[        ] 	at java.base/ja
+va.util.concurrent.ThreadPo
+olExecutor.runWorker(Thread
+PoolExecutor.java:1136)
+[        ] 	at java.base/ja
+va.util.concurrent.ThreadPo
+olExecutor$Worker.run(Threa
+dPoolExecutor.java:635)
+[        ] 	at java.base/ja
+va.lang.Thread.run(Thread.j
+ava:833)
+[        ] Caused by: org.g
+radle.api.internal.plugins.
+PluginApplicationException:
+ Failed to apply plugin 'co
+m.android.internal.version-
+check'.
+[        ] 	at org.gradle.a
+pi.internal.plugins.Default
+PluginManager.doApply(Defau
+ltPluginManager.java:176)
+[        ] 	at org.gradle.a
+pi.internal.plugins.Default
+PluginManager.apply(Default
+PluginManager.java:148)
+[        ] 	at org.gradle.a
+pi.internal.plugins.Default
+ObjectConfigurationAction.a
+pplyType(DefaultObjectConfi
+gurationAction.java:161)
+[        ] 	at org.gradle.a
+pi.internal.plugins.Default
+ObjectConfigurationAction.a
+ccess$200(DefaultObjectConf
+igurationAction.java:43)
+[        ] 	at org.gradle.a
+pi.internal.plugins.Default
+ObjectConfigurationAction$3
+.run(DefaultObjectConfigura
+tionAction.java:98)
+[        ] 	at org.gradle.a
+pi.internal.plugins.Default
+ObjectConfigurationAction.e
+xecute(DefaultObjectConfigu
+rationAction.java:184)
+[        ] 	at org.gradle.a
+pi.internal.project.Abstrac
+tPluginAware.apply(Abstract
+PluginAware.java:49)
+[        ] 	at com.android.
+build.gradle.BasePlugin.app
+ly(BasePlugin.kt:29)
+[        ] 	at com.android.
+build.gradle.AppPlugin.appl
+y(AppPlugin.kt:26)
+[        ] 	at com.android.
+build.gradle.AppPlugin.appl
+y(AppPlugin.kt:24)
+[        ] 	at org.gradle.a
+pi.internal.plugins.Imperat
+iveOnlyPluginTarget.applyIm
+perative(ImperativeOnlyPlug
+inTarget.java:43)
+[        ] 	at org.gradle.a
+pi.internal.plugins.RuleBas
+edPluginTarget.applyImperat
+ive(RuleBasedPluginTarget.j
+ava:51)
+[        ] 	at org.gradle.a
+pi.internal.plugins.Default
+PluginManager.addPlugin(Def
+aultPluginManager.java:190)
+[        ] 	at org.gradle.a
+pi.internal.plugins.Default
+PluginManager.access$100(De
+faultPluginManager.java:54)
+[        ] 	at org.gradle.a
+pi.internal.plugins.Default
+PluginManager$AddPluginBuil
+dOperation.run(DefaultPlugi
+nManager.java:285)
+[        ] 	at org.gradle.i
+nternal.operations.DefaultB
+uildOperationRunner$1.execu
+te(DefaultBuildOperationRun
+ner.java:29)
+[        ] 	at org.gradle.i
+nternal.operations.DefaultB
+uildOperationRunner$1.execu
+te(DefaultBuildOperationRun
+ner.java:26)
+[        ] 	at org.gradle.i
+nternal.operations.DefaultB
+uildOperationRunner$2.execu
+te(DefaultBuildOperationRun
+ner.java:66)
+[        ] 	at org.gradle.i
+nternal.operations.DefaultB
+uildOperationRunner$2.execu
+te(DefaultBuildOperationRun
+ner.java:59)
+[        ] 	at org.gradle.i
+nternal.operations.DefaultB
+uildOperationRunner.execute
+(DefaultBuildOperationRunne
+r.java:157)
+[        ] 	at org.gradle.i
+nternal.operations.DefaultB
+uildOperationRunner.execute
+(DefaultBuildOperationRunne
+r.java:59)
+[        ] 	at org.gradle.i
+nternal.operations.DefaultB
+uildOperationRunner.run(Def
+aultBuildOperationRunner.ja
+va:47)
+[        ] 	at org.gradle.i
+nternal.operations.DefaultB
+uildOperationExecutor.run(D
+efaultBuildOperationExecuto
+r.java:68)
+[        ] 	at org.gradle.a
+pi.internal.plugins.Default
+PluginManager.lambda$doAppl
+y$0(DefaultPluginManager.ja
+va:170)
+[        ] 	at org.gradle.i
+nternal.code.DefaultUserCod
+eApplicationContext.apply(D
+efaultUserCodeApplicationCo
+ntext.java:43)
+[        ] 	at org.gradle.a
+pi.internal.plugins.Default
+PluginManager.doApply(Defau
+ltPluginManager.java:169)
+[        ] 	at org.gradle.a
+pi.internal.plugins.Default
+PluginManager.apply(Default
+PluginManager.java:139)
+[        ] 	at org.gradle.p
+lugin.use.resolve.internal.
+ClassPathPluginResolution.a
+pplyTo(ClassPathPluginResol
+ution.java:50)
+[        ] 	at org.gradle.p
+lugin.use.internal.DefaultP
+luginRequestApplicator$Appl
+yAction.apply(DefaultPlugin
+RequestApplicator.java:156)
+[        ] 	... 297 more
+[  +33 ms] Caused by: java.
+lang.RuntimeException: 
+Minimum supported Gradle 
+version is 8.9. Current 
+version is 8.7. If using 
+the gradle wrapper, try 
+editing the 
+distributionUrl in C:\Users
+\prana\OneDrive\Documents\G
+itHub\wwc\android\gradle\wr
+apper\gradle-wrapper.proper
+ties to gradle-8.9-all.zip
+[        ] 	at com.android.
+build.gradle.internal.plugi
+ns.VersionCheckPlugin.doApp
+ly(VersionCheckPlugin.kt:70
+)
+[        ] 	at com.android.
+build.gradle.internal.plugi
+ns.VersionCheckPlugin$apply
+$1.invoke(VersionCheckPlugi
+n.kt:49)
+[        ] 	at com.android.
+build.gradle.internal.plugi
+ns.VersionCheckPlugin$apply
+$1.invoke(VersionCheckPlugi
+n.kt:48)
+[        ] 	at com.android.
+build.gradle.internal.servi
+ces.RunOnceBuildService.run
+Once(RunOnceBuildService.kt
+:39)
+[        ] 	at com.android.
+build.gradle.internal.plugi
+ns.VersionCheckPlugin.apply
+(VersionCheckPlugin.kt:48)
+[        ] 	at com.android.
+build.gradle.internal.plugi
+ns.VersionCheckPlugin.apply
+(VersionCheckPlugin.kt:35)
+[        ] 	at org.gradle.a
+pi.internal.plugins.Imperat
+iveOnlyPluginTarget.applyIm
+perative(ImperativeOnlyPlug
+inTarget.java:43)
+[        ] 	at org.gradle.a
+pi.internal.plugins.RuleBas
+edPluginTarget.applyImperat
+ive(RuleBasedPluginTarget.j
+ava:51)
+[        ] 	at org.gradle.a
+pi.internal.plugins.Default
+PluginManager.addPlugin(Def
+aultPluginManager.java:190)
+[        ] 	at org.gradle.a
+pi.internal.plugins.Default
+PluginManager.access$100(De
+faultPluginManager.java:54)
+[        ] 	at org.gradle.a
+pi.internal.plugins.Default
+PluginManager$AddPluginBuil
+dOperation.run(DefaultPlugi
+nManager.java:285)
+[        ] 	at org.gradle.i
+nternal.operations.DefaultB
+uildOperationRunner$1.execu
+te(DefaultBuildOperationRun
+ner.java:29)
+[        ] 	at org.gradle.i
+nternal.operations.DefaultB
+uildOperationRunner$1.execu
+te(DefaultBuildOperationRun
+ner.java:26)
+[        ] 	at org.gradle.i
+nternal.operations.DefaultB
+uildOperationRunner$2.execu
+te(DefaultBuildOperationRun
+ner.java:66)
+[        ] 	at org.gradle.i
+nternal.operations.DefaultB
+uildOperationRunner$2.execu
+te(DefaultBuildOperationRun
+ner.java:59)
+[        ] 	at org.gradle.i
+nternal.operations.DefaultB
+uildOperationRunner.execute
+(DefaultBuildOperationRunne
+r.java:157)
+[        ] 	at org.gradle.i
+nternal.operations.DefaultB
+uildOperationRunner.execute
+(DefaultBuildOperationRunne
+r.java:59)
+[        ] 	at org.gradle.i
+nternal.operations.DefaultB
+uildOperationRunner.run(Def
+aultBuildOperationRunner.ja
+va:47)
+[        ] 	at org.gradle.i
+nternal.operations.DefaultB
+uildOperationExecutor.run(D
+efaultBuildOperationExecuto
+r.java:68)
+[        ] 	at org.gradle.a
+pi.internal.plugins.Default
+PluginManager.lambda$doAppl
+y$0(DefaultPluginManager.ja
+va:170)
+[        ] 	at org.gradle.i
+nternal.code.DefaultUserCod
+eApplicationContext.apply(D
+efaultUserCodeApplicationCo
+ntext.java:43)
+[        ] 	at org.gradle.a
+pi.internal.plugins.Default
+PluginManager.doApply(Defau
+ltPluginManager.java:169)
+[        ] 	... 325 more
+[        ] BUILD FAILED in 
+1s
+[        ] 5 actionable tasks: 1 executed, 4 up-to-date
+[        ] Watched directory hierarchies: [C:\src\flutter\packages\flutter_tools\gradle]
+[ +508 ms] Running Gradle task 'assembleDebug'... (completed in 2,139ms)
+[  +34 ms] "flutter apk" took 2,913ms.
+[  +73 ms] Gradle task 
+assembleDebug failed with 
+exit code 1
+[  +10 ms] 
+           #0      
+throwToolExit (package:flut
+ter_tools/src/base/common.d
+art:34:3)
+           #1      AndroidG
+radleBuilder.buildGradleApp
+ (package:flutter_tools/src
+/android/gradle.dart:592:7)
+           <asynchronous 
+suspension>
+           #2      AndroidG
+radleBuilder.buildApk (pack
+age:flutter_tools/src/andro
+id/gradle.dart:234:5)
+           <asynchronous 
+suspension>
+           #3      
+BuildApkCommand.runCommand 
+(package:flutter_tools/src/
+commands/build_apk.dart:131
+:5)
+           <asynchronous 
+suspension>
+           #4      FlutterC
+ommand.run.<anonymous 
+closure> (package:flutter_t
+ools/src/runner/flutter_com
+mand.dart:1559:27)
+           <asynchronous 
+suspension>
+           #5      
+AppContext.run.<anonymous 
+closure> (package:flutter_t
+ools/src/base/context.dart:
+154:19)
+           <asynchronous 
+suspension>
+           #6      
+CommandRunner.runCommand (p
+ackage:args/command_runner.
+dart:212:13)
+           <asynchronous 
+suspension>
+           #7      FlutterC
+ommandRunner.runCommand.<an
+onymous closure> (package:f
+lutter_tools/src/runner/flu
+tter_command_runner.dart:48
+7:9)
+           <asynchronous 
+suspension>
+           #8      
+AppContext.run.<anonymous 
+closure> (package:flutter_t
+ools/src/base/context.dart:
+154:19)
+           <asynchronous 
+suspension>
+           #9      FlutterC
+ommandRunner.runCommand (pa
+ckage:flutter_tools/src/run
+ner/flutter_command_runner.
+dart:422:5)
+           <asynchronous 
+suspension>
+           #10     
+run.<anonymous 
+closure>.<anonymous 
+closure> (package:flutter_t
+ools/runner.dart:104:11)
+           <asynchronous 
+suspension>
+           #11     
+AppContext.run.<anonymous 
+closure> (package:flutter_t
+ools/src/base/context.dart:
+154:19)
+           <asynchronous 
+suspension>
+           #12     main (pa
+ckage:flutter_tools/executa
+ble.dart:103:3)
+           <asynchronous 
+suspension>
+
+
+[        ] Running 1 shutdown hook
+[   +3 ms] Shutdown hooks complete
+[ +213 ms] exiting with code 1
